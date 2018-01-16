@@ -1,0 +1,14 @@
+<section class="control">
+	<button class="control__button" [class.control__button--active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+	<button class="control__button" [class.control__button--active]="filterBy=='teams'" (click)="filterBy='teams'">Teams</button>
+	<button class="control__button" [class.control__button--active]="filterBy=='sketch'" (click)="filterBy='sketch'">Sketches</button>
+	<button class="control__button" [class.control__button--active]="filterBy=='office'" (click)="filterBy='office'">Offices</button>
+</section>
+<section class="gallery">
+	<div class="gallery__imagebox" *ngFor="let image of (visibleImages | imageFilter:filterBy)">
+		<a [routerLink] = "['image', image.id]" class="gallery__imagebox__link">
+			<img src="{{ image.url }}" class="gallery__imagebox__image">
+		</a>
+	</div>
+	<div class="emptyBox"></div>
+</section>

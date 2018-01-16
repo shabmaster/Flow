@@ -1,0 +1,19 @@
+<div class="slider">
+  <div [class]="sliderClasses[i]" *ngFor="let slideImg of sliderImg; let i = index">
+    <img class="slider__img" alt="" [src]="slideImg">
+    <p>{{ sliderContent[i] }}</p>
+  </div>
+  <div class="slider__nav">
+    <ul>
+      <li class="previous" (click)="showPreviousItem()">
+        <span><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></span>
+      </li>
+      <li class="next" (click)="showNextItem()">
+        <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+      </li>
+    </ul>
+  </div>
+  <div class="mouse-cover" [ngClass]="{'mouse-cover--disabled': disableMouseScroll}">
+    <div class="mouse"></div>
+  </div>
+</div>

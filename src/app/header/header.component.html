@@ -1,0 +1,43 @@
+<header class="scrollheader">
+	<div class="header">
+    <nav class="flexy-nav">
+      <div class="flexy-nav__logo">
+        <a class="flexy-nav__logo__link" routerLink="">FlowJTS</a>
+      </div>
+      <button class="flexy-nav__toggle" (click)="toggleShow()">FlowJTS </button>
+      <ul [(ngClass)]="toggleClasses">
+        <li class="flexy-nav__item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="flexy-nav__item">
+          <a routerLink="about" routerLinkActive="active">About</a>
+          <ul class="submenu">
+            <li>
+              <a routerLink="about/gallery">Image gallery</a>
+            </li>
+            <li>
+              <a routerLink="">How to work</a>
+            </li>
+            <li>
+              <a routerLink="">How to improve</a>
+            </li>
+          </ul>
+        </li>
+        <li class="flexy-nav__item">
+          <a routerLink="contact" routerLinkActive="active">Contact</a>
+        </li>
+        <li class="flexy-nav__item">
+          <a routerLink="login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="flexy-nav__item">
+          <a routerLink="registration" routerLinkActive="active">Sign&nbsp;up</a>
+        </li>
+      </ul>
+      <form action="" class="flexy-nav__form">
+        <input class="flexy-nav__search" type="text" placeholder="Type to search and hit enter">
+      </form>
+    </nav>
+  </div>
+</header>
+<div class="lining">
+</div>

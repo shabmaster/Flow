@@ -1,0 +1,54 @@
+<section class="faq">
+  <h1 class="faq__title">Faq about work with Flow Job Traking System:</h1>
+
+  <div class="pagination">
+    <ul *ngIf="pagesNavigation.pages && pagesNavigation.pages.length" class="pagination__list">
+      <li class="pagination__list__item" [ngClass]="{disabled:pagesNavigation.currentPage === 1}">
+        <a class="pagination__list__item__link" (click)="setPage(1)">First</a>
+      </li>
+      <li class="pagination__list__item" [ngClass]="{disabled:pagesNavigation.currentPage === 1}">
+        <a class="pagination__list__item__link" (click)="setPage(pagesNavigation.currentPage - 1)">Previous</a>
+      </li>
+
+      <li class="pagination__list__item" *ngFor="let page of pagesNavigation.pages" [ngClass]="{active:pagesNavigation.currentPage === page}">
+        <a class="pagination__list__item__link" (click)="setPage(page)">{{page}}</a>
+      </li>
+
+      <li class="pagination__list__item" [ngClass]="{disabled:pagesNavigation.currentPage === pagesNavigation.totalPages}">
+        <a class="pagination__list__item__link" (click)="setPage(pagesNavigation.currentPage + 1)">Next</a>
+      </li>
+      <li class="pagination__list__item" [ngClass]="{disabled:pagesNavigation.currentPage === pagesNavigation.totalPages}">
+        <a class="pagination__list__item__link" (click)="setPage(pagesNavigation.totalPages)">Last</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq__content">
+  	<div *ngFor="let item of pagedItems">
+  		<h2>{{item.question}}</h2>
+  		<p>{{item.answer}}</p>
+  	</div>
+  </div>
+
+  <div class="pagination">
+    <ul *ngIf="pagesNavigation.pages && pagesNavigation.pages.length" class="pagination__list">
+      <li class="pagination__list__item" [ngClass]="{disabled:pagesNavigation.currentPage === 1}">
+      	<a class="pagination__list__item__link" (click)="setPage(1)">First</a>
+      </li>
+      <li class="pagination__list__item" [ngClass]="{disabled:pagesNavigation.currentPage === 1}">
+        <a class="pagination__list__item__link" (click)="setPage(pagesNavigation.currentPage - 1)">Previous</a>
+      </li>
+
+      <li class="pagination__list__item" *ngFor="let page of pagesNavigation.pages" [ngClass]="{active:pagesNavigation.currentPage === page}">
+        <a class="pagination__list__item__link" (click)="setPage(page)">{{page}}</a>
+      </li>
+
+      <li class="pagination__list__item" [ngClass]="{disabled:pagesNavigation.currentPage === pagesNavigation.totalPages}">
+        <a class="pagination__list__item__link" (click)="setPage(pagesNavigation.currentPage + 1)">Next</a>
+      </li>
+      <li class="pagination__list__item" [ngClass]="{disabled:pagesNavigation.currentPage === pagesNavigation.totalPages}">
+        <a class="pagination__list__item__link" (click)="setPage(pagesNavigation.totalPages)">Last</a>
+      </li>
+    </ul>
+  </div>
+</section>

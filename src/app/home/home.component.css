@@ -1,0 +1,145 @@
+.icons__section {
+	text-align: center;
+	margin-top: 20px;
+	border-bottom: 1px solid #dcddde;
+	padding-bottom: 20px;
+}
+
+.icons__section .fa {
+	font-size: 5em;
+	color: #007849;
+}
+
+.icons__section h2 {
+	color: #4034b0;
+}
+
+.benefit-section {
+	text-align: center;
+	margin-top: 20px;
+	border-bottom: 1px solid #dcddde;
+}
+
+.benefit-section h2 {
+	color: #4034b0;
+	font-size: 1.7em;
+	margin-bottom: 30px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.benefit-section p {
+	font-size: 1.2em;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-bottom: 20px;
+	text-align: justify;
+	line-height: 1.1;
+}
+
+.benefit-section img {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-bottom: 20px;
+}
+
+.benefit-section .image,
+.benefit-section .text {
+	display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sign-up {
+	text-align: center;
+	background-color: #007849;
+}
+
+.sign-up__title {
+	color: #ffffff;
+}
+
+.sign-up__text {
+	text-align: center;
+	padding: 0;
+}
+
+.sign-up__form {
+	text-align: center;
+	padding-top: 0;
+	margin-bottom: 12px;
+}
+
+.sign-up__form__email {
+	border: 0;
+	padding: 8px;
+}
+
+.sign-up__form__button {
+	border: 0;
+	background-color: #00b36d;
+	padding: 8px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.testimonial {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.testimonial__title {
+	color: #004c2e;
+	margin-bottom: 30px;
+}
+
+.testimonial__photo {
+	width: 270px;
+	height: 270px;
+	border: 1px solid #007849;
+	border-radius: 135px;
+	-webkit-border-radius: 135px;
+	-moz-border-radius: 135px;
+	margin: 0 auto;
+}
+
+.testimonial__photo--1 {
+	background: url('../../assets/photo1.png') 50% 50%;
+}
+.testimonial__photo--2 {
+	background: url('../../assets/photo2.png') 50% 50%;
+}
+.testimonial__photo--3 {
+	background: url('../../assets/photo3.png') 50% 50%;
+}
+
+.testimonial__position {
+	color: #004c2e;
+}
+
+.testimonial__text {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: justify;
+}
+
+@media all and ( min-width: 720px ) {
+
+  .sign-up__text {
+    text-align: right;
+    padding: 12px;
+  }
+
+  .sign-up__form {
+  	text-align: left;
+  	padding-top: 25px;
+  	margin-bottom: 0;
+  }
+
+}

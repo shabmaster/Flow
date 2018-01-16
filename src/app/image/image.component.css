@@ -1,0 +1,15 @@
+.single-image {
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+.single-image__image {
+	max-width: 100%;
+}
+
+.single-image__name {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}

@@ -1,0 +1,35 @@
+.contact__info {
+	display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  background: #ffffff url('../../assets/background-pattern.png') repeat;
+}
+
+.grid--center {
+	margin: 0 auto;
+	color: #004c2e;
+}
+
+.grid__item__title {
+	font-size: 30px;
+	text-align: left;
+}
+
+.grid__item__text {
+	padding-left: 35px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.grid__item__map {
+  padding: 0;
+}
+
+.agm-map {
+  height: calc(100vh - 90px);
+}

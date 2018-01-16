@@ -1,0 +1,34 @@
+.faq {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.faq__content {
+	text-align: justify;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.pagination__list {
+	padding-left: 0;
+}
+
+.pagination__list__item {
+	display: inline-block;
+	margin-right: 4px;
+	background-color: #007849;
+	box-shadow: 0 0px 2px rgba(0,0,0,0.4);
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.active {
+	background-color: #00b36d;
+}
+
+.pagination__list__item__link {
+	color: #ffffff;
+	padding: 5px 10px 5px 10px;
+	display: block;
+}

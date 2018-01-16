@@ -1,0 +1,37 @@
+<section class="grid">
+  <div class="grid__row grid__row--md">
+    <div class="grid__item contact__info">
+    	<div class="grid grid--center">
+      	<div class="grid__item">
+  	      <h3 class="grid__item__title"><i class="fa fa-phone" aria-hidden="true"></i>
+ our phone</h3>
+  	      <p class="grid__item__text">+38 063 999 99 99</p>
+      	</div>
+  			<div class="grid__item">
+  	      <h3 class="grid__item__title"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+ email support</h3>
+  	      <p class="grid__item__text">support@flow.jts.com</p>
+      	</div>
+      	<div class="grid__item">
+  	      <h3 class="grid__item__title"><i class="fa fa-telegram" aria-hidden="true"></i>
+ our Telegram</h3>
+  	      <p class="grid__item__text">@FlowJTS</p>
+      	</div>
+    	</div>
+    </div>
+    <div class="grid__item grid__item__map">
+      <agm-map class="agm-map" [latitude]="mapLat" [longitude]="mapLng" [zoom]="zoom">
+  			<agm-marker [latitude]="oficeLat1" [longitude]="oficeLng1" label="1">
+  				<agm-info-window>
+      			<strong>First ofice location</strong>
+    			</agm-info-window>
+  			</agm-marker>
+  			<agm-marker [latitude]="oficeLat2" [longitude]="oficeLng2" label="2">
+  				<agm-info-window>
+      			<strong>Second ofice location</strong>
+    			</agm-info-window>
+  			</agm-marker>
+			</agm-map>
+    </div>
+  </div>
+</section>
