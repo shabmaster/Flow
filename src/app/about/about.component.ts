@@ -23,7 +23,6 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
 	  this.http.get('assets/about-pages-data.json').map((response: Response) => response.json())
 	    .subscribe(data => {
-	    	// set items to json response
 	      this.allItems = data;
 	 		  // initialize to page 1
 	      this.setPage(1);

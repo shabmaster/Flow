@@ -1,17 +1,17 @@
-<h1>Board creation. Now you have total {{ boardCount }} boards</h1>
-<section class="cards">
-  <article class="card" *ngFor="let board of boards; let i = index">
-    <div class="text">
-      <img src="./assets/close_red.png" alt="remove board" (click)="removeBoard(i)">
-      <h2>{{ board }}</h2>
+<h1 class="title">Board creation. Now your team have total {{ boardCount }} boards</h1>
+<section class="boards">
+  <article class="board" *ngFor="let board of boards; let i = index">
+    <div class="board__text">
+      <img class="board__destroy" src="./assets/close_red.png" alt="remove board" (click)="removeBoard(i)">
+      <h3 class="board__title">{{ board }}</h3>
     </div>
   </article>
-  <article class="card">
-    <div class="text">
-      <h2>Add new board:</h2>
+  <article class="board">
+    <div class="board__text">
+      <h3 class="board__title">Add new board:</h3>
       <form>
-        <input type="text" class="txt" name="board" placeholder="Enter new board name" [(ngModel)]="boardName">
-        <input type="submit" class="btn" [value]="btnText" (click)="addBoard()">
+        <input type="text" class="board__input" name="board" placeholder="Enter new board name" [(ngModel)]="boardName">
+        <input type="submit" class="board__btn" [value]="btnText" (click)="addBoard()" [disabled]="boardName.length < 3">
       </form>
     </div>
   </article>

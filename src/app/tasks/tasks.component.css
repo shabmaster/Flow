@@ -1,0 +1,62 @@
+.task-section {
+	text-align: left;
+}
+
+.main-title {
+	color: #004c2e;
+}
+
+.form {
+	max-width: 280px;
+}
+
+.form__input,
+.form__text {
+	width: 278px;
+	padding: 10px;
+}
+
+.form__select {
+	width: 300px;
+	padding: 10px;
+}
+
+.form__input:focus,
+.form__text:focus,
+.form__select:focus {
+	outline: none;
+	border: solid 2px #007849;
+}
+
+.grid__item {
+	padding: 12px 0 12px 0;
+}
+
+.grid__item__label {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	display: block;
+}
+
+.alert {
+	background-color: #00b36d;
+	padding: 10px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	display: inline-block;
+	color: #ffffff;
+	width: 280px;
+}
+
+.submit {
+	background-color: #004c2e;
+	padding: 10px;
+	color: #ffffff;
+	border: 0;
+	width: 300px;
+	margin-top: 15px;
+}
+
+.submit:disabled {
+	background-color: #00b36d;
+}

@@ -1,37 +1,56 @@
-h1 {
-	margin-left: 10px;
-	font-size: 1.4em;
+.title {
+	font-size: 1.3em;
 }
-.cards {
+
+.boards {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
 }
-.card {
+
+.board {
   flex: 0 0 270px;
   margin: 10px;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-} 
-.card .text {
+}
+
+.board__text {
   padding: 0 20px 20px;
 }
-.card img {
+
+.board__title {
+	color: #004c2e;
+}
+
+.board__destroy {
 	width: 20px;
 	height: 20px;
 	float: right;
 	cursor: pointer;
 }
-input.txt {
+
+.board__input {
 	padding: 10px;
 	width: 208px;
 	margin-bottom: 20px;
 }
-input.btn {
+
+.board__input:focus {
+	outline: none;
+	border: solid 2px #007849;
+}
+
+.board__btn {
 	border: 0;
 	display: block;
 	padding: 10px;
-	background-color: #A5F883;
+	color: #ffffff;
+	background-color: #007849;
 	cursor: pointer;
 	width: 100%;
+}
+
+.board__btn:disabled {
+	background-color: #00b36d;
 }

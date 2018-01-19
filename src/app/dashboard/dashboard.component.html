@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="sidebar">
+    <div class="sidebar__title">
+      Sidebar
+    </div>
+    <ul class="sidebar__nav">
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Profile</a>
+      </li>
+      <li [ngClass]="{'sidebar__nav--disable': userRole != 'user'}">
+        <a routerLink="statistics" routerLinkActive="active">Statistics</a>
+      </li>
+      <li [ngClass]="{'sidebar__nav--disable': userRole != 'user'}">
+        <a routerLink="tracking" routerLinkActive="active">Tasks boards</a>
+      </li>
+      <li [ngClass]="{'sidebar__nav--disable': userRole != 'admin'}">
+        <a routerLink="management" routerLinkActive="active">Team statistics</a>
+      </li>
+      <li [ngClass]="{'sidebar__nav--disable': userRole != 'admin'}">
+        <a routerLink="tasks" routerLinkActive="active">Add new tasks</a>
+      </li>
+      <li [ngClass]="{'sidebar__nav--disable': userRole != 'admin'}">
+        <a routerLink="employees" routerLinkActive="active">Team members</a>
+      </li>
+      <li [ngClass]="{'sidebar__nav--disable': userRole != 'admin'}">
+        <a routerLink="boards" routerLinkActive="active">Boards management</a>
+      </li>
+      <li>
+        <a routerLink="/" (click)="logOut()">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <div [(ngClass)]="buttonClasses">
+    <a class="button" (click)="sideBarShow()"></a>
+    <router-outlet></router-outlet>
+  </div>
+</div>

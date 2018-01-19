@@ -1,3 +1,44 @@
 .login {
+	width: 280px;
+	margin: 80px auto;
+	display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
+.grid__item {
+	padding: 0;
+}
+
+.row__label {
+	margin-bottom: 5px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.form__input {
+	width: 260px;
+	padding: 10px;
+}
+
+.form__input:focus {
+	outline: none;
+	border: solid 2px #007849;
+}
+
+.form__submit {
+	background-color: #004c2e;
+	padding: 10px;
+	color: #ffffff;
+	border: 0;
+	width: 284px;
+	margin-top: 15px;
+}
+
+.form__submit:disabled {
+	background-color: #00b36d;
 }

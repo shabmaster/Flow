@@ -1,0 +1,10 @@
+.fb,
+.twitter,
+.gplus {
+	border: 0;
+	background-color: #007849;
+	color: #ffffff;
+	font-size: 28px;
+	padding: 0;
+	margin-right: 10px;
+}

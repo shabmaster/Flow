@@ -1,0 +1,105 @@
+.wrapper {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position: absolute;
+  width: 220px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s;
+  background-color: #ffffff;
+  min-height: calc(100vh - 130px);
+}
+
+.isOpen {
+  transform: translate3d(220px, 0, 0);
+}
+
+.button:before {
+  content: "\f0c9";
+  font: 42px fontawesome;
+}
+
+.sidebar__title {
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 1px solid #222;
+  background-color: #004c2e;
+}
+
+.sidebar ul {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.sidebar__nav--disable {
+  display: none;
+}
+
+.sidebar__nav li a {
+  position: relative;
+  display: block;
+  padding: 20px 0 20px 50px;
+  font-size: 12px;
+  color: #ffffff;
+  border-bottom: 1px solid #222;
+  background-color: #007849;
+}
+
+.sidebar__nav li a:before {
+  font: 16px fontawesome;
+  position: absolute;
+  top: 19px;
+  left: 20px;
+}
+
+.sidebar__nav li:nth-child(1) a:before {
+  content: "\f085";
+}
+
+.sidebar__nav li:nth-child(2) a:before {
+  content: "\f080";
+}
+
+.sidebar__nav li:nth-child(3) a:before {
+  content: "\f00a";
+}
+
+.sidebar__nav li:nth-child(4) a:before {
+  content: "\f080";
+}
+
+.sidebar__nav li:nth-child(5) a:before {
+  content: "\f022";
+}
+
+.sidebar__nav li:nth-child(6) a:before {
+  content: "\f0c0";
+}
+
+.sidebar__nav li:nth-child(7) a:before {
+  content: "\f00a";
+}
+
+.sidebar__nav li:nth-child(8) a:before {
+  content: "\f023";
+  left: 23px;
+}
+
+.sidebar__nav li a:hover {
+  background-color: #004c2e;
+}
+
+.sidebar__nav li a.active {
+  box-shadow: inset 5px 0px 0px #007849;
+  background-color: #00b36d;
+}

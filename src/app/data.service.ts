@@ -1,22 +1,40 @@
 import { Injectable } from '@angular/core';
 
+import { Http, Headers, RequestOptions, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class DataService {
 
 	private isUserLoggedIn;
-	public userName;
+  public users: any[];
+	public user: any = {};
 
-  constructor() {
+  constructor(private http: Http) {
   	this.isUserLoggedIn = false;
+    this.getUsers();
   }
-  
-  setUserLoggedIn() {
+
+  getUsers() {
+    this.http.get('assets/users-info.json').map((response: Response) => response.json())
+      .subscribe(data => {
+        this.users = data;
+    });
+  }
+
+  setUserLoggedIn(loginUser) {
   	this.isUserLoggedIn = true;
-  	this.userName = 'admin';
+  	this.user = loginUser;
   }
 
   getUserLoggedIn() {
   	return this.isUserLoggedIn;
+  }
+
+  setUserLogOut() {
+    this.isUserLoggedIn = false;
+    this.user = {};
   }
 
 }

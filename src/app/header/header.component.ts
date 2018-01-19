@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
 	showToggle: boolean = false;
+  isLogin: boolean = false;
 	toggleClasses = this.setToggleClasses(this.showToggle);
 
-  constructor() { }
+  constructor(private loginData: DataService) { }
 
   ngOnInit() {
+  }
+
+  ngDoCheck() {
+    this.isLogin = this.loginData.getUserLoggedIn();
+  }
+
+  logOut() {
+    this.loginData.setUserLogOut();
   }
 
   public setToggleClasses(showToggle) {

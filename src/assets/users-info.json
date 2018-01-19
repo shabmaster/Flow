@@ -1,0 +1,52 @@
+[
+ {
+	"role": "admin",
+	"login" : "admin1@gmail.com",
+	"pass" : "admin1",
+	"fullname": "Тестовий Адмін Петрович",
+	"avatar": "assets/avatar.jpg",
+	"email": "admin1@gmail.com",
+	"phone": "+380639999999",
+	"project": "SuperMegaCorp",
+	"team": [
+		"user11",
+		"user12",
+		"user13"
+	],
+	"boards": [
+		"To do",
+		"In progress",
+		"In testing",
+		"Done"
+	]
+ },
+ {
+	"role": "admin",
+	"login" : "admin2@gmail.com",
+	"pass" : "admin2",
+	"fullname": "Тестовий Адмін Васильович",
+	"avatar": "assets/avatar.jpg",
+	"email": "admin2@gmail.com",
+	"phone": "+380639999990",
+	"project": "TetraCorp",
+	"team": [
+		"user21",
+		"user22"
+	],
+	"boards": [
+		"To do",
+		"Done"
+	]
+ },
+  {
+	"role": "user",
+	"login" : "user11@gmail.com",
+	"pass" : "user11",
+	"fullname": "Тестовий Юзер Васильович",
+	"avatar": "assets/avatar.jpg",
+	"email": "user11@gmail.com",
+	"phone": "+380639999900",
+	"project": "SuperMegaCorp",
+	"manager": "admin1"
+ }
+]

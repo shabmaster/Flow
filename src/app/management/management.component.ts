@@ -13,7 +13,6 @@ export class ManagementComponent implements OnInit {
   constructor(private user: DataService) { }
 
   ngOnInit() {
-  	this.userName = this.user.userName;
   }
 
 }

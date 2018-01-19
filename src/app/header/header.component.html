@@ -27,9 +27,12 @@
           <a routerLink="contact" routerLinkActive="active">Contact</a>
         </li>
         <li class="flexy-nav__item">
-          <a routerLink="login" routerLinkActive="active">Login</a>
+          <a routerLink="login" routerLinkActive="active" *ngIf="!isLogin; else elseBlock">Login</a>
+          <ng-template #elseBlock>
+            <a routerLink="/" (click)="logOut()">Log out</a>
+          </ng-template>
         </li>
-        <li class="flexy-nav__item">
+        <li class="flexy-nav__item" *ngIf="!isLogin">
           <a routerLink="registration" routerLinkActive="active">Sign&nbsp;up</a>
         </li>
       </ul>

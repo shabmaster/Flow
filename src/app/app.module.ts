@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { DataService } from './data.service';
 import { ImageService } from './image.service';
@@ -22,13 +22,15 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SocialbarComponent } from './socialbar/socialbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageComponent } from './image/image.component';
 import { ImageFilterPipe } from './image-filter.pipe';
 import { HttpModule } from '@angular/http';
 import { LoginGuard } from './login.guard';
+import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -47,16 +49,19 @@ import { LoginGuard } from './login.guard';
     HeaderComponent,
     FooterComponent,
     SliderComponent,
-    SidebarComponent,
+    SocialbarComponent,
     NotfoundComponent,
     GalleryComponent,
     ImageComponent,
-    ImageFilterPipe
+    ImageFilterPipe,
+    ProfileComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBp7sfbcnQm-55MpiwWGTz8WSLgxO0LMyE'

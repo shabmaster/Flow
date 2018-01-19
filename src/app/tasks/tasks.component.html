@@ -1,3 +1,37 @@
-<p>
-  tasks works!
-</p>
+<section class="task-section">
+	<h3 class="main-title">Add some new tasks for your team</h3>
+	<div class="grid__row grid__row--md">
+		<div class="grid__item">
+			<form [formGroup]="taskForm" (ngSubmit)="addTask(taskForm.value)" class="form">
+				<div class="grid__row grid__row--md">
+					<div class="grid__item form">
+						<label class="grid__item__label">Task title:</label>
+						<input class="form__input" type="text" formControlName="task">
+						<div class="alert" *ngIf="!taskForm.controls['task'].valid && taskForm.controls['task'].touched">
+							Task name is required
+						</div>
+						<label class="grid__item__label">Description:</label>
+						<textarea class="form__text" formControlName="description"></textarea>
+						<div class="alert" *ngIf="!taskForm.controls['description'].valid && taskForm.controls['description'].touched">
+							Description must be more than 20, but not more than 600 letters.
+						</div>
+						<label class="grid__item__label">Asign to:</label>
+						<select class="form__select" formControlName="user">
+		  				<option *ngFor="let user of employee" value="{{ user }}">{{ user }}</option>
+						</select>
+						<input type="submit" class="submit" value="Create Task" [disabled]="!taskForm.valid">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="grid__item">
+			<div class="grid__row grid__row--md" *ngFor="let task of allNewTasks; let i = index">
+				<div class="grid__item">Task #{{ i+1 }}: {{ task }}</div>
+				<div class="grid__item">Description: {{ allNewDescriptions[i] }}</div>
+				<div class="grid__item">Asign to: {{ asignTo[i] }}</div>
+			</div>
+		</div>
+		<div class="grid__item">
+		</div>
+	</div>
+</section>
